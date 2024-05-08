@@ -1,16 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const redis = require('../redis');
+require('dotenv').config();
 
-const configs = require('../util/config')
-
-let visits = 0
+let visits = 0;
 
 /* GET index data. */
 router.get('/', async (req, res) => {
-  visits++
+  visits++;
 
   res.send({
-    ...configs,
+    mongo_url: process.env.MONGO_URL,
+    redis: process.env.REDIS_URL,
+    hello: 'hello',
     visits
   });
 });

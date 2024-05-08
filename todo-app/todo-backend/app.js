@@ -16,3 +16,5 @@ app.use('/', indexRouter);
 app.use('/todos', todosRouter);
 
 module.exports = app;
+
+// for future reference, the issue was that I had exposed port 5173 internally (5173:5173) in the docker compose dev yaml, but the internal port in the container is actually 3000. So it needs to be 5173:3000
