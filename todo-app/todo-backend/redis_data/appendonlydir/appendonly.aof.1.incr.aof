@@ -841,3 +841,15 @@ $7
 counter
 $1
 4
+*2
+$6
+SELECT
+$1
+0
+*3
+$3
+set
+$7
+counter
+$1
+2

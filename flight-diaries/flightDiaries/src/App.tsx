@@ -4,7 +4,7 @@ import DiaryEntries from './components/DiaryEntries';
 import DiaryForm from './components/DiaryForm';
 import Notification from './components/Notification';
 import { DiaryEntry } from './types';
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'http://localhost:8080';
 
 function App() {
   const [diaryEntries, setDiaryEntries] = useState<DiaryEntry[]>([]);

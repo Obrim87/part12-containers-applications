@@ -28,7 +28,7 @@ const data = [
     date: '2017-05-11',
     weather: 'cloudy',
     visibility: 'good',
-    comment: 'I almost failed the landing but I survived'
+    comment: 'I almost failed the landing but I survived!'
   }
 ];
 

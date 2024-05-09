@@ -50,4 +50,3 @@ services:
       MONGO_URL: mongodb://the_username:the_password@mongo:27017/the_database
   debug-helper:
     image: busybox
-# this now appears to be working! up to 12.21

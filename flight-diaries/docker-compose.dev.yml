@@ -1,0 +1,22 @@
+services:
+  app:
+    image: diaries-frontend-dev
+    build:
+      context: ./flightDiaries
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./flightDiaries:/usr/src/app
+    ports:
+      - 5173:5173
+  server:
+    image: diaries-backend-dev
+    volumes:
+      - ./flightDiaries_backend:/usr/src/app
+    ports:
+      - 3000:3000
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
